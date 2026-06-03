@@ -5,91 +5,214 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Shruti Mishra | WordPress Developer</title>
 
-<style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
+<style>
+/* Reset & Base Styles */
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
 body{
-background:#0f172a;
-color:white;
-line-height:1.6;
+    background-color: #0b111e;
+    background-image: 
+        radial-gradient(at 0% 0%, hsla(142,72%,16%,0.2) 0, transparent 50%),
+        radial-gradient(at 100% 100%, hsla(220,72%,16%,0.2) 0, transparent 50%);
+    color:#e2e8f0;
+    line-height:1.7;
 }
 
+/* Header Section */
 header{
-text-align:center;
-padding:80px 20px;
-background:#111827;
+    text-align:center;
+    padding: 120px 20px 80px 20px;
+    background: radial-gradient(circle at top, #111827, #0b111e);
+    border-bottom: 1px solid #1e293b;
 }
 
 header h1{
-font-size:50px;
+    font-size: 54px;
+    font-weight: 700;
+    letter-spacing: -1px;
+    background: linear-gradient(to right, #ffffff, #10b981);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
 }
 
 header p{
-margin-top:10px;
-font-size:20px;
+    font-size:20px;
+    color: #94a3b8;
+    font-weight: 500;
 }
 
+/* Button Customization */
 .btn{
-display:inline-block;
-margin-top:20px;
-padding:12px 25px;
-background:#22c55e;
-color:white;
-text-decoration:none;
-border-radius:6px;
+    display:inline-block;
+    margin-top:30px;
+    padding:14px 30px;
+    background:#10b981;
+    color:white;
+    text-decoration:none;
+    border-radius:8px;
+    font-weight: 600;
+    font-size: 15px;
+    box-shadow: 0 4px 14px rgba(16, 185, 129, 0.3);
+    transition: all 0.3s ease;
 }
 
+.btn:hover{
+    background:#059669;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
+}
+
+/* Section Layout */
 section{
-padding:60px 10%;
+    padding: 80px 12%;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 h2{
-margin-bottom:20px;
-color:#22c55e;
+    font-size: 28px;
+    margin-bottom: 30px;
+    color:#10b981;
+    position: relative;
+    display: inline-block;
 }
 
+h2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 40px;
+    height: 3px;
+    background-color: #10b981;
+    border-radius: 2px;
+}
+
+/* Cards & Components */
 .card{
-background:#1e293b;
-padding:20px;
-border-radius:10px;
-margin-bottom:20px;
+    background: rgba(30, 41, 59, 0.5);
+    backdrop-filter: blur(8px);
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
 }
 
+.about-text {
+    font-size: 18px;
+    color: #cbd5e1;
+}
+
+/* Skills Badges */
 .skills{
-display:flex;
-flex-wrap:wrap;
-gap:10px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
 }
 
 .skill{
-background:#22c55e;
-padding:10px 15px;
-border-radius:20px;
+    background: #1e293b;
+    color: #e2e8f0;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: 500;
+    font-size: 14px;
+    border: 1px solid rgba(255,255,255,0.08);
+    transition: all 0.3s ease;
+}
+
+.skill:hover{
+    background: rgba(16, 185, 129, 0.15);
+    color: #10b981;
+    border-color: #10b981;
+    transform: translateY(-3px);
+}
+
+/* Projects Grid Layout */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 10px;
 }
 
 .project{
-background:#1e293b;
-padding:20px;
-margin-top:20px;
-border-radius:10px;
+    background: rgba(30, 41, 59, 0.4);
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
 }
 
-footer{
-text-align:center;
-padding:30px;
-background:#111827;
+.project:hover{
+    transform: translateY(-5px);
+    border-color: rgba(16, 185, 129, 0.4);
+    background: rgba(30, 41, 59, 0.7);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.project h3{
+    color: #ffffff;
+    margin-bottom: 12px;
+    font-size: 20px;
+}
+
+.project p{
+    color: #94a3b8;
+    font-size: 15px;
+}
+
+/* Contact Links */
+.contact-info p {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    color: #cbd5e1;
+}
+
+.contact-info p:last-child {
+    margin-bottom: 0;
 }
 
 a{
-color:#22c55e;
+    color:#10b981;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
 }
 
+a:hover{
+    color: #34d399;
+    text-decoration: underline;
+}
+
+/* Footer */
+footer{
+    text-align:center;
+    padding: 40px 20px;
+    background:#0b111e;
+    border-top: 1px solid #1e293b;
+    color: #64748b;
+    font-size: 14px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    header h1 { font-size: 38px; }
+    section { padding: 50px 6%; }
+}
 </style>
 
 </head>
@@ -97,116 +220,66 @@ color:#22c55e;
 <body>
 
 <header>
-
-<h1>Shruti Mishra</h1>
-
-<p>WordPress Developer | Elementor Expert</p>
-
-<a href="#" class="btn">Download Resume</a>
-
+    <h1>Shruti Mishra</h1>
+    <p>WordPress Developer | Elementor Expert</p>
+    <a href="#" class="btn">Download Resume</a>
 </header>
 
-<section>
-
-<h2>About Me</h2>
-
-<div class="card">
-
-<p>
-I am a WordPress Developer skilled in WordPress,
-Elementor, WooCommerce, PHP, MySQL, HTML, CSS and JavaScript.
-I create responsive, SEO-friendly and high-performance websites.
-</p>
-
-</div>
-
+<section id="about">
+    <h2>About Me</h2>
+    <div class="card">
+        <p class="about-text">
+            I am a WordPress Developer skilled in WordPress, Elementor, WooCommerce, PHP, MySQL, HTML, CSS, and JavaScript. I specialize in creating responsive, SEO-friendly, and high-performance websites that deliver excellent user experiences.
+        </p>
+    </div>
 </section>
 
-<section>
-
-<h2>Skills</h2>
-
-<div class="skills">
-
-<div class="skill">WordPress</div>
-<div class="skill">Elementor</div>
-<div class="skill">WooCommerce</div>
-<div class="skill">HTML</div>
-<div class="skill">CSS</div>
-<div class="skill">Bootstrap</div>
-<div class="skill">JavaScript</div>
-<div class="skill">PHP</div>
-<div class="skill">MySQL</div>
-<div class="skill">GitHub</div>
-
-</div>
-
+<section id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+        <div class="skill">WordPress</div>
+        <div class="skill">Elementor</div>
+        <div class="skill">WooCommerce</div>
+        <div class="skill">HTML5 & CSS3</div>
+        <div class="skill">Bootstrap</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">PHP</div>
+        <div class="skill">MySQL</div>
+        <div class="skill">GitHub</div>
+    </div>
 </section>
 
-<section>
+<section id="projects">
+    <h2>Projects</h2>
+    <div class="project-grid">
+        <div class="project">
+            <h3>E-Commerce Website</h3>
+            <p>A fully functional WooCommerce-based online store featuring custom product layouts and secure payment gateway integration.</p>
+        </div>
 
-<h2>Projects</h2>
+        <div class="project">
+            <h3>Business Website</h3>
+            <p>A sleek, professional corporate website built using WordPress and Elementor, optimized for speed and conversion.</p>
+        </div>
 
-<div class="project">
-
-<h3>E-Commerce Website</h3>
-
-<p>
-WooCommerce based online store with payment gateway integration.
-</p>
-
-</div>
-
-<div class="project">
-
-<h3>Business Website</h3>
-
-<p>
-Responsive business website built using WordPress and Elementor.
-</p>
-
-</div>
-
-<div class="project">
-
-<h3>Portfolio Website</h3>
-
-<p>
-Personal portfolio website for showcasing projects and skills.
-</p>
-
-</div>
-
+        <div class="project">
+            <h3>Portfolio Website</h3>
+            <p>A clean and modern personal portfolio website built to showcase professional projects, skills, and contact details effectively.</p>
+        </div>
+    </div>
 </section>
 
-<section>
-
-<h2>Contact</h2>
-
-<div class="card">
-
-<p>Email: shrutigana@gmail.com</p>
-
-<p>GitHub:
-<a href="https://github.com/shruti-gana">
-github.com/shruti-gana
-</a>
-</p>
-
-<p>LinkedIn:
-<a href="#">
-Your LinkedIn Profile
-</a>
-</p>
-
-</div>
-
+<section id="contact">
+    <h2>Contact Me</h2>
+    <div class="card contact-info">
+        <p><strong>Email:</strong> <a href="mailto:shrutigana@gmail.com">shrutigana@gmail.com</a></p>
+        <p><strong>GitHub:</strong> <a href="https://github.com/shruti-gana" target="_blank">github.com/shruti-gana</a></p>
+        <p><strong>LinkedIn:</strong> <a href="#" target="_blank">Your LinkedIn Profile</a></p>
+    </div>
 </section>
 
 <footer>
-
-<p>© 2026 Shruti Mishra</p>
-
+    <p>© 2026 Shruti Mishra. All rights reserved.</p>
 </footer>
 
 </body>
