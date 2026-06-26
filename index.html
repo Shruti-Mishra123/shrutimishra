@@ -1,291 +1,332 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Shruti Mishra | WordPress Developer</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
- 
-<style>
-/* Reset & Base Styles */
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family: 'Plus Jakarta Sans', sans-serif;
-}
+<meta name="description" content="Portfolio of Shruti Mishra - WordPress Developer and Elementor Expert">
 
-body{
-    background-color: #0b111e;
-    background-image: 
-        radial-gradient(at 0% 0%, hsla(142,72%,16%,0.2) 0, transparent 50%),
-        radial-gradient(at 100% 100%, hsla(220,72%,16%,0.2) 0, transparent 50%);
-    color:#e2e8f0;
-    line-height:1.7;
-}
+<link rel="stylesheet" href="style.css">
 
-/* Header Section */
-header{
-    text-align:center;
-    padding: 120px 20px 80px 20px;
-    background: radial-gradient(circle at top, #111827, #0b111e);
-    border-bottom: 1px solid #1e293b;
-}
+<link
+href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+rel="stylesheet">
 
-header h1{
-    font-size: 54px;
-    font-weight: 700;
-    letter-spacing: -1px;
-    background: linear-gradient(to right, #ffffff, #10b981);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin-bottom: 10px;
-}
-
-header p{
-    font-size:20px;
-    color: #94a3b8;
-    font-weight: 500;
-}
-
-/* Button Customization */
-.btn{
-    display:inline-block;
-    margin-top:30px;
-    padding:14px 30px;
-    background:#10b981;
-    color:white;
-    text-decoration:none;
-    border-radius:8px;
-    font-weight: 600;
-    font-size: 15px;
-    box-shadow: 0 4px 14px rgba(16, 185, 129, 0.3);
-    transition: all 0.3s ease;
-}
-
-.btn:hover{
-    background:#059669;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
-}
-
-/* Section Layout */
-section{
-    padding: 80px 12%;
-    max-width: 1400px;
-    margin: 0 auto;
-}
-
-h2{
-    font-size: 28px;
-    margin-bottom: 30px;
-    color:#10b981;
-    position: relative;
-    display: inline-block;
-}
-
-h2::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -6px;
-    width: 40px;
-    height: 3px;
-    background-color: #10b981;
-    border-radius: 2px;
-}
-
-/* Cards & Components */
-.card{
-    background: rgba(30, 41, 59, 0.5);
-    backdrop-filter: blur(8px);
-    padding: 30px;
-    border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
-}
-
-.about-text {
-    font-size: 18px;
-    color: #cbd5e1;
-}
-
-/* Skills Badges */
-.skills{
-    display:flex;
-    flex-wrap:wrap;
-    gap:12px;
-}
-
-.skill{
-    background: #1e293b;
-    color: #e2e8f0;
-    padding: 10px 20px;
-    border-radius: 30px;
-    font-weight: 500;
-    font-size: 14px;
-    border: 1px solid rgba(255,255,255,0.08);
-    transition: all 0.3s ease;
-}
-
-.skill:hover{
-    background: rgba(16, 185, 129, 0.15);
-    color: #10b981;
-    border-color: #10b981;
-    transform: translateY(-3px);
-}
-
-/* Projects Grid Layout */
-.project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 25px;
-    margin-top: 10px;
-}
-
-.project{
-    background: rgba(30, 41, 59, 0.4);
-    padding: 30px;
-    border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    transition: all 0.3s ease;
-}
-
-.project:hover{
-    transform: translateY(-5px);
-    border-color: rgba(16, 185, 129, 0.4);
-    background: rgba(30, 41, 59, 0.7);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-}
-
-.project h3{
-    color: #ffffff;
-    margin-bottom: 12px;
-    font-size: 20px;
-}
-
-.project p{
-    color: #94a3b8;
-    font-size: 15px;
-}
-
-/* Contact Links */
-.contact-info p {
-    margin-bottom: 15px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 16px;
-    color: #cbd5e1;
-}
-
-.contact-info p:last-child {
-    margin-bottom: 0;
-}
-
-a{
-    color:#10b981;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.2s ease;
-}
-
-a:hover{
-    color: #34d399;
-    text-decoration: underline;
-}
-
-/* Footer */
-footer{
-    text-align:center;
-    padding: 40px 20px;
-    background:#0b111e;
-    border-top: 1px solid #1e293b;
-    color: #64748b;
-    font-size: 14px;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    header h1 { font-size: 38px; }
-    section { padding: 50px 6%; }
-}
-</style>
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
 </head>
 
 <body>
 
+<!--================ NAVBAR ================-->
+
 <header>
-    <h1>Shruti Mishra</h1>
-    <p>WordPress Developer | Elementor Expert</p>
-    <a href="#" class="btn">Download Resume</a>
+
+<nav class="navbar">
+
+<div class="logo">
+Shruti<span>.</span>
+</div>
+
+<ul class="nav-menu">
+
+<li><a href="#home">Home</a></li>
+
+<li><a href="#about">About</a></li>
+
+<li><a href="#skills">Skills</a></li>
+
+<li><a href="#projects">Projects</a></li>
+
+<li><a href="#contact">Contact</a></li>
+
+</ul>
+
+<div class="menu-btn">
+
+<i class="fas fa-bars"></i>
+
+</div>
+
+</nav>
+
 </header>
 
-<section id="about">
-    <h2>About Me</h2>
-    <div class="card">
-        <p class="about-text">
-            I am a WordPress Developer skilled in WordPress, Elementor, WooCommerce, PHP, MySQL, HTML, CSS, and JavaScript. I specialize in creating responsive, SEO-friendly, and high-performance websites that deliver excellent user experiences.
-        </p>
-    </div>
+<!--================ HERO ================-->
+
+<section class="hero" id="home">
+
+<div class="hero-left">
+
+<h3>Hello, I'm</h3>
+
+<h1>Shruti Mishra</h1>
+
+<h2>
+
+<span class="typing"></span>
+
+</h2>
+
+<p>
+
+I create modern, responsive and SEO-friendly websites using WordPress, Elementor, HTML, CSS, JavaScript and PHP.
+
+</p>
+
+<div class="hero-buttons">
+
+<a href="assets/Shruti_Mishra_Resume.pdf" class="btn" download>
+
+Download Resume
+
+</a>
+
+<a href="#projects" class="btn-outline">
+
+View Projects
+
+</a>
+
+</div>
+
+</div>
+
+<div class="hero-right">
+
+<img src="images/profile.jpg" alt="Shruti">
+
+</div>
+
 </section>
 
-<section id="skills">
-    <h2>Skills</h2>
-    <div class="skills">
-        <div class="skill">WordPress</div>
-        <div class="skill">Elementor</div>
-        <div class="skill">WooCommerce</div>
-        <div class="skill">HTML5 & CSS3</div>
-        <div class="skill">Bootstrap</div>
-        <div class="skill">JavaScript</div>
-        <div class="skill">PHP</div>
-        <div class="skill">MySQL</div>
-        <div class="skill">GitHub</div>
-    </div>
+<!--================ TECH SLIDER ================-->
+
+<section class="slider">
+
+<div class="slide-track">
+
+<span>HTML5</span>
+
+<span>CSS3</span>
+
+<span>JavaScript</span>
+
+<span>Bootstrap</span>
+
+<span>WordPress</span>
+
+<span>Elementor</span>
+
+<span>WooCommerce</span>
+
+<span>PHP</span>
+
+<span>MySQL</span>
+
+<span>GitHub</span>
+
+<span>SEO</span>
+
+<span>HTML5</span>
+
+<span>CSS3</span>
+
+<span>JavaScript</span>
+
+<span>Bootstrap</span>
+
+<span>WordPress</span>
+
+<span>Elementor</span>
+
+<span>WooCommerce</span>
+
+<span>PHP</span>
+
+<span>MySQL</span>
+
+</div>
+
 </section>
 
-<section id="projects">
-    <h2>Projects</h2>
-    <div class="project-grid">
-        <div class="project">
-            <h3>Artelex Interio & Projects Pvt Ltd</h3>
-            <p>Developed a responsive and SEO-friendly corporate website for Artelex, a modular kitchen and interior design brand. Designed modern UI, optimized website performance, created service pages, and implemented a user-friendly layout to enhance brand visibility and generate customer inquiries..</p>
-            <p> <b>Tech Stack:-</b> HTML, CSS, JavaScript, Bootstrap, WordPress, Elementor, SEO.</p>
-            <p><a href="https://artelex.in/" class="nav-link">Artelex.in</a></p>
-        </div>
+<!--================ ABOUT ================-->
 
-        <div class="project">
-            <h3>MumGrhum Interior Studio </h3>
-            <p> Developed a responsive and SEO-friendly corporate website for MumGrhum, a modular kitchen and interior design brand. Designed modern UI, optimized website performance, created service pages, and implemented a user-friendly layout to enhance brand visibility and generate customer inquiries.</p>
-              <p> <b>Tech Stack:-</b> HTML, CSS, JavaScript, Bootstrap, WordPress, Elementor, SEO.</p>
-            <p><a href="https://mumgrhum.com/" class="nav-link">MumGrhum.com</a></p>
-        </div>
+<section id="about" class="section">
 
-        <div class="project">
-            <h3>Urban Shelves Furniture Showroom</h3>
-            <p>Designed and developed a responsive, SEO-friendly website for UrbanShelves, showcasing modular furniture, wardrobes, and smart storage solutions. Built with a modern UI, optimized performance, and a mobile-friendly layout to enhance user experience and increase customer engagement.</p>
-            <p> <b>Tech Stack:-</b> HTML, CSS, JavaScript, Bootstrap, WordPress, Elementor, SEO.</p>
-            <p><a href="https://urbanshelves.in/" class="nav-link">Urban shelves.in</a></p>
-        </div>
-    </div>
+<h2 class="title">About Me</h2>
+
+<div class="about-box">
+
+<p>
+
+I am a passionate WordPress Developer with experience in creating responsive, SEO-friendly and high-performance websites. I enjoy designing clean interfaces and building websites that help businesses grow online.
+
+</p>
+
+</div>
+
 </section>
-<section id="contact">
-    <h2>Contact Me</h2>
-    <div class="card contact-info">
-        <p><strong>Email:</strong> <a href="mailto:shrutigana@gmail.com">shrutigana@gmail.com</a></p>
-        <p><strong>GitHub:</strong> <a href="https://github.com/shruti-gana" target="_blank">github.com/shruti-gana</a></p>
-        <p><strong>LinkedIn:</strong> <a href="#" target="_blank">Your LinkedIn Profile</a></p>
-    </div>
+
+<!--================ SKILLS ================-->
+
+<section id="skills" class="section">
+
+<h2 class="title">Skills</h2>
+
+<div class="skills-grid">
+
+<div class="skill-card">WordPress</div>
+
+<div class="skill-card">Elementor</div>
+
+<div class="skill-card">WooCommerce</div>
+
+<div class="skill-card">HTML5</div>
+
+<div class="skill-card">CSS3</div>
+
+<div class="skill-card">Bootstrap</div>
+
+<div class="skill-card">JavaScript</div>
+
+<div class="skill-card">PHP</div>
+
+<div class="skill-card">MySQL</div>
+
+<div class="skill-card">GitHub</div>
+
+<div class="skill-card">SEO</div>
+
+</div>
+
+</section>
+
+<!--================ PROJECTS ================-->
+
+<section id="projects" class="section">
+
+<h2 class="title">Projects</h2>
+
+<div class="projects">
+
+<div class="project-card">
+
+<img src="images/artelex.jpg">
+
+<h3>Artelex</h3>
+
+<p>
+
+Corporate website for a modular kitchen and interior brand.
+
+</p>
+
+<a href="https://artelex.in/" target="_blank">
+
+Visit Website
+
+</a>
+
+</div>
+
+<div class="project-card">
+
+<img src="images/mumgrhum.jpg">
+
+<h3>MumGrhum</h3>
+
+<p>
+
+Interior design studio website built with WordPress.
+
+</p>
+
+<a href="https://mumgrhum.com/" target="_blank">
+
+Visit Website
+
+</a>
+
+</div>
+
+<div class="project-card">
+
+<img src="images/urbanshelves.jpg">
+
+<h3>Urban Shelves</h3>
+
+<p>
+
+Furniture showroom website with responsive design.
+
+</p>
+
+<a href="https://urbanshelves.in/" target="_blank">
+
+Visit Website
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!--================ CONTACT ================-->
+
+<section id="contact" class="section">
+
+<h2 class="title">Contact</h2>
+
+<div class="contact-box">
+
+<p>
+
+<i class="fas fa-envelope"></i>
+
+shrutigana@gmail.com
+
+</p>
+
+<p>
+
+<i class="fab fa-github"></i>
+
+github.com/shruti-gana
+
+</p>
+
+<p>
+
+<i class="fab fa-linkedin"></i>
+
+Your LinkedIn Profile
+
+</p>
+
+</div>
+
 </section>
 
 <footer>
-    <p>© 2026 Shruti Mishra. All rights reserved.</p>
+
+<p>
+
+© 2026 Shruti Mishra. All Rights Reserved.
+
+</p>
+
 </footer>
 
+<script src="script.js"></script>
+
 </body>
+
 </html>
